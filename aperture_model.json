@@ -2,8 +2,8 @@
  "aperture": {
   "halo_params": {
    "delta_rms": 0.0,
-   "emitx_norm": 3.5e-06,
-   "emity_norm": 3.5e-06,
+   "nemitt_x": 3.5e-06,
+   "nemitt_y": 3.5e-06,
    "halo_primary": 6.0,
    "halo_r": 6.0,
    "halo_x": 6.0,
@@ -1854,8 +1854,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.0",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.0",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.0",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -1888,8 +1888,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.1",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.1",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.1",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -1922,8 +1922,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.2",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.2",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.2",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -1956,8 +1956,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.3",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.3",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.3",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -1990,8 +1990,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.4",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.4",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.4",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2024,8 +2024,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.5",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.5",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.5",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2058,8 +2058,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.6",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.6",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.6",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2092,8 +2092,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.7",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.7",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.7",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2126,8 +2126,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.8",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.8",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.8",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2160,8 +2160,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.9",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.9",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.9",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2194,8 +2194,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.10",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.10",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.10",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2228,8 +2228,8 @@
     ]
    },
    {
-    "name": "edge_qf_bellow.11",
-    "pipe": "edge_qf_bellow",
+    "name": "edge_qf_trans.11",
+    "pipe": "edge_qf_trans",
     "survey_reference_name": "qf.11",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2262,8 +2262,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.0",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.0",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.0",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2296,8 +2296,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.1",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.1",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.1",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2330,8 +2330,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.2",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.2",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.2",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2364,8 +2364,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.3",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.3",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.3",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2398,8 +2398,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.4",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.4",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.4",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2432,8 +2432,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.5",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.5",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.5",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2466,8 +2466,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.6",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.6",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.6",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2500,8 +2500,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.7",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.7",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.7",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2534,8 +2534,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.8",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.8",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.8",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2568,8 +2568,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.9",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.9",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.9",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2602,8 +2602,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.10",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.10",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.10",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2636,8 +2636,8 @@
     ]
    },
    {
-    "name": "qf_to_mb_bellow.11",
-    "pipe": "qf_to_mb_bellow",
+    "name": "qf_to_mb_trans.11",
+    "pipe": "qf_to_mb_trans",
     "survey_reference_name": "qf.11",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2670,8 +2670,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.0",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.0",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.0",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2704,8 +2704,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.1",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.1",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.2",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2738,8 +2738,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.2",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.2",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.4",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2772,8 +2772,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.3",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.3",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.6",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2806,8 +2806,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.4",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.4",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.8",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2840,8 +2840,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.5",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.5",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.10",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2874,8 +2874,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.6",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.6",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.12",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2908,8 +2908,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.7",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.7",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.14",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2942,8 +2942,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.8",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.8",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.16",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -2976,8 +2976,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.9",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.9",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.18",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3010,8 +3010,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.10",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.10",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.20",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3044,8 +3044,8 @@
     ]
    },
    {
-    "name": "mb_to_qd_bellow.11",
-    "pipe": "mb_to_qd_bellow",
+    "name": "mb_to_qd_trans.11",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.22",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3078,8 +3078,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.0",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.0",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.1",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3112,8 +3112,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.1",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.1",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.3",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3146,8 +3146,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.2",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.2",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.5",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3180,8 +3180,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.3",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.3",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.7",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3214,8 +3214,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.4",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.4",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.9",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3248,8 +3248,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.5",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.5",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.11",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3282,8 +3282,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.6",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.6",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.13",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3316,8 +3316,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.7",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.7",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.15",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3350,8 +3350,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.8",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.8",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.17",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3384,8 +3384,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.9",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.9",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.19",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3418,8 +3418,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.10",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.10",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.21",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3452,8 +3452,8 @@
     ]
    },
    {
-    "name": "qd_to_mb_bellow.11",
-    "pipe": "mb_to_qd_bellow",
+    "name": "qd_to_mb_trans.11",
+    "pipe": "mb_to_qd_trans",
     "survey_reference_name": "mb.23",
     "tol_r": 0.0,
     "tol_x": 0.0,
@@ -3902,9 +3902,9 @@
    "quad_pipe",
    "chicane_pipe",
    "straight_pipe",
-   "edge_qf_bellow",
-   "qf_to_mb_bellow",
-   "mb_to_qd_bellow",
+   "edge_qf_trans",
+   "qf_to_mb_trans",
+   "mb_to_qd_trans",
    "mb_to_edge_iface"
   ],
   "pipes": [
@@ -4213,8 +4213,8 @@
     "shape": [
      "Ellipse",
      {
-      "half_major": 0.055,
-      "half_minor": 0.034
+      "a": 0.055,
+      "b": 0.034
      }
     ]
    },
@@ -4222,9 +4222,9 @@
     "shape": [
      "Octagon",
      {
-      "half_diagonal": 0.05,
-      "half_height": 0.048,
-      "half_width": 0.048
+      "max_diagonal": 0.05,
+      "max_y": 0.048,
+      "max_x": 0.048
      }
     ]
    },
@@ -4240,10 +4240,10 @@
     "shape": [
      "RectEllipse",
      {
-      "half_height": 0.045,
-      "half_major": 0.125,
-      "half_minor": 0.055,
-      "half_width": 0.11
+      "max_y": 0.045,
+      "a": 0.125,
+      "b": 0.055,
+      "max_x": 0.11
      }
     ]
    },
@@ -4251,10 +4251,10 @@
     "shape": [
      "Racetrack",
      {
-      "half_height": 0.055,
-      "half_major": 0.012,
-      "half_minor": 0.01,
-      "half_width": 0.27
+      "max_y": 0.055,
+      "a": 0.012,
+      "b": 0.01,
+      "max_x": 0.27
      }
     ]
    }
