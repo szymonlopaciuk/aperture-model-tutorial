@@ -5,8 +5,6 @@
 
 
 # %% Toy ring survey and optics [slide]
-
-
 # %% [markdown]
 #
 # Points of interest and survey references:
@@ -21,24 +19,14 @@
 
 
 # %%
-import logging
-import warnings
-
 import matplotlib.pyplot as plt
 import numpy as np
 import xtrack as xt
 
-logging.getLogger("matplotlib").setLevel(logging.ERROR)
-warnings.filterwarnings("ignore", message=".*No artists with labels found.*")
-plt.rcParams.update({"figure.figsize": (7, 3.5), "font.size": 10})
 env = xt.load("toy_ring.json")
 ring = env["ring"]
 print(ring)
-
-
 # %% Survey [slide]
-
-
 # %% [markdown]
 #
 # Labels identify the aperture survey references.
@@ -55,13 +43,9 @@ survey.plot(
         r"qd\..*": {"width": 2.6, "fontsize": 9},
     },
 )
-plt.gcf().set_size_inches(6, 6)
+plt.gcf().set_size_inches(8, 8)
 plt.title("Toy ring survey and aperture survey references")
-
-
 # %% Optics [slide]
-
-
 # %% [markdown]
 #
 # Beta functions and dispersion around the ring.
@@ -69,13 +53,9 @@ plt.title("Toy ring survey and aperture survey references")
 
 # %%
 twiss = ring.twiss()
-twiss.plot(figsize=(8, 3.5))
+twiss.plot(figsize=(12, 5))
 plt.title(f"Toy ring optics (qx = {twiss.qx:.3f}, qy = {twiss.qy:.3f})")
-
-
 # %% Aperture toy ring [slide]
-
-
 # %% [markdown]
 #
 # We now build an aperture model for the same line.
@@ -103,16 +83,10 @@ plt.title(f"Toy ring optics (qx = {twiss.qx:.3f}, qy = {twiss.qy:.3f})")
 
 # %%
 print(env.aperture)
-
-
 # %%
 model = ring.aperture
 print(model)
-
-
 # %% Profiles [slide]
-
-
 # %% [markdown]
 # Profiles are transverse cross sections. Let's create the profiles used by the current model:
 # `arc_ellipse` for the dipole chambers, `quad_octagon` for quadrupoles,
@@ -130,8 +104,6 @@ arc_ellipse = env.aperture.new_profile(
 fig, ax = plt.subplots(figsize=(3.5, 2.2))
 arc_ellipse.plot(ax=ax)
 fig.tight_layout()
-
-
 # %%
 quad_octagon = env.aperture.new_profile(
     "quad_octagon",
@@ -144,8 +116,6 @@ quad_octagon = env.aperture.new_profile(
 fig, ax = plt.subplots(figsize=(3.5, 2.2))
 quad_octagon.plot(ax=ax)
 fig.tight_layout()
-
-
 # %%
 drift_circle = env.aperture.new_profile(
     "drift_circle",
@@ -156,11 +126,7 @@ drift_circle = env.aperture.new_profile(
 fig, ax = plt.subplots(figsize=(3.5, 2.2))
 drift_circle.plot(ax=ax)
 fig.tight_layout()
-
-
 # %% Profiles for the widened chicane insertion [slide]
-
-
 # %% [markdown]
 # `ip_entry` and `ip_chamber` are the profiles for the widened chicane insertion.
 
@@ -178,8 +144,6 @@ ip_entry = env.aperture.new_profile(
 fig, ax = plt.subplots(figsize=(3.5, 2.2))
 ip_entry.plot(ax=ax)
 fig.tight_layout()
-
-
 # %%
 ip_chamber = env.aperture.new_profile(
     "ip_chamber",
@@ -193,11 +157,7 @@ ip_chamber = env.aperture.new_profile(
 fig, ax = plt.subplots(figsize=(3.5, 2.2))
 ip_chamber.plot(ax=ax)
 fig.tight_layout()
-
-
 # %% Inspect a profile [slide]
-
-
 # %% [markdown]
 # The same profiles are accessible through `ring.aperture.profiles`. We can list their names,
 # inspect a shape's parameters, or obtain the polygon used to draw it:
@@ -209,11 +169,7 @@ profile = ring.aperture.profiles["arc_ellipse"]
 print(profile.shape)
 profile_polygon = profile.build_polygon(len_points=128)
 print(profile_polygon[:5])
-
-
 # %% Main pipes: arc bend pipe [slide]
-
-
 # %% [markdown]
 #
 # A pipe is a longitudinal sequence of installed profiles. The same pipe can later be installed
@@ -237,11 +193,7 @@ arc_bend_pipe = env.aperture.new_pipe(
     ],
 )
 arc_bend_pipe.plot()
-
-
 # %% Inspect the bend pipe [slide]
-
-
 # %% [markdown]
 # To inspect the pipe behind these plots, use `ring.aperture.pipes`. A pipe can be iterated
 # or indexed to access its profile positions and their properties:
@@ -251,15 +203,9 @@ arc_bend_pipe.plot()
 pipe = ring.aperture.pipes["arc_bend_pipe"]
 print(f"Length: {pipe.length:.3f} m; curvature: {pipe.curvature:.3f} 1/m")
 print([(pos.profile.name, pos.shift_s) for pos in pipe])
-
-
 # %%
 arc_bend_pipe.plot_3d(frame="curved");
-
-
 # %% Quadrupole pipe [slide]
-
-
 # %% [markdown]
 #
 # The quadrupole chamber is straight. We rotate the octagon slightly around the local pipe axis to
@@ -278,11 +224,7 @@ quad_pipe = env.aperture.new_pipe(
     ],
 )
 quad_pipe.plot_3d()
-
-
 # %% Chicane pipe [slide]
-
-
 # %% [markdown]
 #
 # The chicane is modelled as one aggregate chamber rather than four separate bend chambers. The
@@ -303,11 +245,7 @@ chamber_width = 5.0
 print(f"Chicane length: {chicane_length:.3f} m")
 print(f"IP position in the pipe: {ip_s:.3f} m")
 print(f"Widened chamber length: {chamber_width:.3f} m")
-
-
 # %% Construct the chicane pipe [slide]
-
-
 # %%
 chicane_pipe = env.aperture.new_pipe(
     "chicane_pipe",
@@ -326,15 +264,9 @@ chicane_pipe = env.aperture.new_pipe(
 
 chicane_pipe.plot(plane="zx")
 plt.ylim(-1, 1)
-
-
 # %%
 chicane_pipe.plot_3d();
-
-
 # %% Straight-section drift pipe [slide]
-
-
 # %% [markdown]
 #
 # The straight insertions between arcs use a circular drift pipe. We define the pipe around its
@@ -355,11 +287,7 @@ straight_pipe = env.aperture.new_pipe(
 )
 straight_pipe.plot()
 plt.ylim(-1, 1)
-
-
 # %% Install the main pipes [slide]
-
-
 # %% [markdown]
 #
 # We now place all the main pipes.
@@ -380,11 +308,7 @@ ring.aperture.place_pipe("quad", quad_pipe, at=quad_names)
 ring.aperture.place_pipe("straight", straight_pipe, at=straight_names)
 
 print(model)
-
-
 # %% Transition pipes [slide]
-
-
 # %% [markdown]
 #
 # **Currently, our model has gaps.** This is not, strictly speaking, a problem for us, as aperture
@@ -401,11 +325,7 @@ print(model)
 survey.plot(labels=[r'q[df]\..*', r'mb\..*'])
 plt.gcf().set_figwidth(6)
 plt.gcf().set_figheight(6)
-
-
 # %% Identify the required transitions [slide]
-
-
 # %% [markdown]
 # Zooming into one cell of the arc, we can identify what transition pipes are needed:
 
@@ -413,13 +333,9 @@ plt.gcf().set_figheight(6)
 # %%
 model.plot_floor_projection(s_range=(8, 12), aspect='equal')
 env.aperture.discard_model()
-
-
 # %%
 cell_sv = env["arc_cell"].survey()
 cell_sv.cols["name", "s", "length"].show()
-
-
 # %% [markdown]
 # In the survey we can see that all the arcs, and all the straight sections (not counting the
 # chicane) are the same.
@@ -436,8 +352,6 @@ cell_sv.cols["name", "s", "length"].show()
 
 
 # %% Measure the transitions [slide]
-
-
 # %% [markdown]
 # Let's collect some values:
 
@@ -461,11 +375,7 @@ print(f'- transition pipe from mb to qd and qd to mb: {mb_to_qd_len} m')
 print(f'- interface from mb to cell/straight edge: {mb_to_edge_len} m')
 print(f'  - first {mb_to_drift_len} m transition from bend ellipse to drift circle')
 print(f'  - remaining {edge_drift_len} m as circular drift pipe')
-
-
 # %% Construct the transition pipes: edge → qf → mb [slide]
-
-
 # %%
 edge_qf_trans = env.aperture.new_pipe(
     'edge_qf_trans',
@@ -475,8 +385,6 @@ edge_qf_trans = env.aperture.new_pipe(
     ],
 )
 edge_qf_trans.plot_3d()
-
-
 # %%
 qf_to_mb_trans = env.aperture.new_pipe(
     'qf_to_mb_trans',
@@ -486,11 +394,7 @@ qf_to_mb_trans = env.aperture.new_pipe(
     ],
 )
 qf_to_mb_trans.plot_3d()
-
-
 # %% Construct the transition pipes: mb → qd and mb → edge [slide]
-
-
 # %%
 mb_to_qd_trans = env.aperture.new_pipe(
     'mb_to_qd_trans',
@@ -500,8 +404,6 @@ mb_to_qd_trans = env.aperture.new_pipe(
     ],
 )
 mb_to_qd_trans.plot_3d()
-
-
 # %%
 mb_to_edge_iface = env.aperture.new_pipe(
     'mb_to_edge_iface',
@@ -512,11 +414,7 @@ mb_to_edge_iface = env.aperture.new_pipe(
     ],
 )
 mb_to_edge_iface.plot_3d()
-
-
 # %% Install the transition pipes [slide]
-
-
 # %% [markdown]
 #
 # Now that the few transition pipes exist, installing them is mechanical. We use the physical
@@ -535,8 +433,6 @@ print("Focusing quadrupoles:", qf_names)
 print("Defocusing quadrupoles:", qd_names)
 print("Bends before qd:", mb_to_qd_names)
 print("Bends after qd:", qd_to_mb_names)
-
-
 # %%
 # `edge_qf_trans` ends at the start of each `qf`, so we place it at `qf@start`
 ring.aperture.place_pipe(
@@ -551,8 +447,6 @@ ring.aperture.place_pipe(
 )
 
 print(model)
-
-
 # %%
 # `mb_to_qd_trans` starts at the end of `mb`
 ring.aperture.place_pipe(
@@ -572,11 +466,7 @@ ring.aperture.place_pipe(
     at=[f'{name}@end' for name in qd_to_mb_names],
 )
 print(model)
-
-
 # %% Build and inspect the aperture model [slide]
-
-
 # %% [markdown]
 #
 # All profiles and pipes are registered in the environment, and all placements belong to
@@ -589,11 +479,7 @@ print("num_profile_points =", model.num_profile_points)
 print("s_tol =", model.s_tol)
 model.build_model();
 print(model)
-
-
 # %% The pipe table [slide]
-
-
 # %% [markdown]
 #
 # The most basic way to inspect the model is to look at the pipe table, which lists all of the
@@ -603,19 +489,13 @@ print(model)
 # %%
 pipe_table = model.get_pipe_table()
 pipe_table.rows[:12].show()
-
-
 # %% [markdown]
 # The columns of the pipe table are:
 
 
 # %%
 print(pipe_table.cols)
-
-
 # %% Pipe positions and spans [slide]
-
-
 # %% [markdown]
 # In particular:
 # - `s_start` and `s_end` refer to the placement of the most extreme profiles of the pipe along
@@ -639,11 +519,7 @@ print(pipe_table.cols)
 # %%
 pt = ring.aperture.get_pipe_table()
 pt.rows[pt.survey_reference == 'mb.5'].show()
-
-
 # %% The aperture bounds table [slide]
-
-
 # %% [markdown]
 #
 # We can investigate the positioning of all the profiles of all the pipes using the bounds table:
@@ -653,11 +529,7 @@ pt.rows[pt.survey_reference == 'mb.5'].show()
 bounds_table = model.get_bounds_table()
 bounds_table.rows[:12].show()
 print(bounds_table.cols)
-
-
 # %% Profile positions and spans [slide]
-
-
 # %% [markdown]
 # Here it's the `s` values that determine the `s_start` and `s_end` of the pipe table, whereas
 # `s_start` and `s_end` values determine the span.
@@ -678,15 +550,9 @@ fig, ax = plt.subplots(figsize=(6, 3))
 ax.imshow(plt.imread("slides_assets/bounds.png"))
 ax.axis("off")
 fig.tight_layout()
-
-
 # %%
 bounds_table.rows[:6].show()
-
-
 # %% Floor plot [slide]
-
-
 # %% [markdown]
 #
 # The most basic plot is the floor plot of the aperture model. Below we overlay the survey on top
@@ -697,11 +563,7 @@ bounds_table.rows[:6].show()
 ax = model.plot_floor_projection(aspect='equal')
 ax.figure.set_figwidth(6)
 ax.figure.set_figheight(6)
-
-
 # %% Floor plot: a smaller chunk of the model [slide]
-
-
 # %% [markdown]
 # We can also choose to only plot a smaller chunk of the model, specifying `origin` and `s_range`:
 
@@ -712,11 +574,7 @@ ax = model.plot_floor_projection(origin=3.9, s_range=(-5, 5))
 ax.set_aspect('equal')
 ax.set_ylim(-1, 1)
 plt.gcf().set_figwidth(7)
-
-
 # %% Follow the pipe placements [slide]
-
-
 # %% [markdown]
 # Each "box" in the floor plot corresponds to a placement in `ring.aperture.pipe_positions`.
 # These placements refer to reusable pipes in `ring.aperture.pipes`, which in turn contain
@@ -727,19 +585,13 @@ plt.gcf().set_figwidth(7)
 print(ring.aperture.pipe_positions.keys()[:5])
 placement = ring.aperture.pipe_positions["chicane_pipe"]
 print(placement)
-
-
 # %%
 # Iterate over individual profile positions
 for pos in placement.pipe:
     profile = ring.aperture.profiles[pos.profile.name]
     print(pos)
     print("    => has shape ", pos.profile.shape)
-
-
 # %% Extents plot [slide]
-
-
 # %% [markdown]
 #
 # The second useful type of plot is seeing the aperture limitation from the point of view of the
@@ -762,11 +614,7 @@ for pos in placement.pipe:
 s_sample = model.get_s_around_transitions(resolution=0.1)
 model.plot_extents(s_positions=s_sample)
 plt.gcf().set_figwidth(8);
-
-
 # %% Extents plot: 1 sigma between 20 and 40 m [slide]
-
-
 # %% [markdown]
 # For example, we can see the beam at $1\sigma$ between $s = 20\,\text{m}$ and $s = 40\,\text{m}$
 # like so:
@@ -776,11 +624,7 @@ plt.gcf().set_figwidth(8);
 s_sample = model.get_s_around_transitions(resolution=0.1, s_range=(20, 40))
 model.plot_extents(s_positions=s_sample, sigmas=1)
 plt.gcf().set_figwidth(8);
-
-
 # %% Save the aperture data [slide]
-
-
 # %% [markdown]
 #
 # `env.aperture.to_json` saves the shared profiles and pipes, together with the placements
